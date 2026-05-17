@@ -1,0 +1,49 @@
+{
+  "skill_name": "user-story",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm building a vehicle management platform for fleet operators. We need user stories for a new feature: remote vehicle diagnostics. Fleet managers should be able to check engine health, tire pressure, and battery status remotely from a dashboard. We also need alerts when something is critical. Can you write user stories for this?",
+      "expected_output": "Multiple user stories in As-a/I-want/So-that format with Given/When/Then acceptance criteria, INVEST validation table, and sizing hints. Should identify fleet manager as primary persona and potentially driver/technician as secondary. Stories should be split appropriately (not one giant story for all diagnostics).",
+      "files": [],
+      "expectations": [
+        "Stories use 'As a / I want to / So that' format",
+        "Each story has acceptance criteria in Given/When/Then format",
+        "Each story has an INVEST validation check",
+        "Each story has a sizing hint",
+        "Stories are split into independent units (not one monolith)",
+        "At least one story covers the alert/notification flow",
+        "Personas are identified (fleet manager at minimum)",
+        "Clarifying questions were asked before generating"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Here are some user stories my team wrote. Can you review and improve them?\n\n1. As a user, I want to log in so that I can log in.\n2. As a user, I want to search for products and filter them and sort them and save favorites so that I can find stuff.\n3. As an admin, I want to manage everything.",
+      "expected_output": "Identifies specific problems with each story: #1 has a tautological 'so that', #2 combines too many features (violates Independent/Small), #3 is too vague. Rewrites each with proper format, acceptance criteria, INVEST validation. Splits #2 into multiple stories.",
+      "files": [],
+      "expectations": [
+        "Identifies that story #1's 'so that' restates the 'I want'",
+        "Identifies that story #2 violates Independent and Small (combines multiple features)",
+        "Identifies that story #3 is too vague to be actionable",
+        "Provides rewritten versions with proper acceptance criteria",
+        "Splits story #2 into at least 2 separate stories",
+        "All rewritten stories include INVEST validation"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We're adding a password reset feature to our mobile banking app. Target users are retail banking customers aged 25-65. The app runs on iOS and Android. Security is critical — we need to comply with banking regulations. Write me user stories for this.",
+      "expected_output": "User stories covering the password reset flow with security-aware acceptance criteria. Should cover happy path, error paths (wrong email, expired link, etc.), and possibly MFA/verification steps given the banking security context. Should ask about specific security requirements before generating.",
+      "files": [],
+      "expectations": [
+        "Stories use proper As-a/I-want/So-that format",
+        "Acceptance criteria cover security concerns (link expiry, attempt limits, etc.)",
+        "At least one story covers the error/unhappy path",
+        "Stories acknowledge the banking regulation constraint",
+        "Each story has INVEST validation and sizing",
+        "Stories are appropriately scoped (not one giant 'reset password' story)"
+      ]
+    }
+  ]
+}
