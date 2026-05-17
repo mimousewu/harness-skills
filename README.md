@@ -51,7 +51,9 @@ ln -sf ~/repos/harness-skills/skills ~/.config/opencode/skills/harness
 
 ### Claude Code
 
-Add the marketplace to your Claude Code settings (`~/.claude/settings.json`):
+**Step 1: Register the marketplace** (one-time, global)
+
+Add to `~/.claude/settings.json`:
 
 ```json
 {
@@ -66,13 +68,15 @@ Add the marketplace to your Claude Code settings (`~/.claude/settings.json`):
 }
 ```
 
-Then install:
+Then install the plugin:
 
 ```
 /plugin install harness-skills@harness-skills
 ```
 
-Add to `enabledPlugins` in `~/.claude/settings.json`:
+**Step 2: Enable per project**
+
+In each project where you want to use harness-skills, add `.claude/settings.json` at the project root:
 
 ```json
 {
@@ -81,6 +85,8 @@ Add to `enabledPlugins` in `~/.claude/settings.json`:
   }
 }
 ```
+
+This keeps the plugin available globally but only activates it (and its CLAUDE.md pipeline guide) in projects that opt in.
 
 Reload with `/reload-plugins`.
 
