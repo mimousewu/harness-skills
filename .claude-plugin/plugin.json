@@ -1,0 +1,8 @@
+{
+  "name": "harness-skills",
+  "description": "Product management harness skills: product framing, journey design, user stories, event storming, and SAD generation",
+  "version": "1.0.0",
+  "author": {
+    "name": "twu"
+  }
+}

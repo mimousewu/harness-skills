@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "harness-skills",
+  "description": "Product management harness skills for design thinking workflows",
+  "owner": {
+    "name": "twu"
+  },
+  "plugins": [
+    {
+      "name": "harness-skills",
+      "description": "Product management harness: product framing, journey design, user stories, event storming, and SAD generation",
+      "author": {
+        "name": "twu"
+      },
+      "source": "./",
+      "category": "development"
+    }
+  ]
+}
