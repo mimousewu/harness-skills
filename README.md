@@ -40,6 +40,17 @@ Each skill can also be used standalone if you provide the required context.
 
 ## Installation
 
+### OpenCode
+
+Clone the repo and symlink the `skills/` directory into OpenCode's config:
+
+```bash
+git clone https://github.com/mimousewu/harness-skills.git ~/repos/harness-skills
+ln -sf ~/repos/harness-skills/skills ~/.config/opencode/skills/harness
+```
+
+### Claude Code
+
 Add the marketplace to your Claude Code settings (`~/.claude/settings.json`):
 
 ```json
