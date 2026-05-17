@@ -1,22 +1,30 @@
 # Harness Skills — Product Management Pipeline
 
-A chain of elicitation skills that progressively builds product understanding from vision to architecture. Each skill produces structured artifacts that downstream skills consume.
+A chain of Design Thinking elicitation skills that progressively builds product understanding from vision to architecture. Each skill produces structured artifacts that downstream skills consume.
 
 ## The Chain
 
 ```
 product-framer → journey-designer → user-story → event-storming → [sad-generator]
+├─── Business Analysis (BA) ────────────────┤├── Technical Architecture ──┤
 ```
 
 Run them in order. Each skill reads upstream artifacts and refuses to start without them (except product-framer, which is the entry point). `sad-generator` is optional — use it when you need a formal architecture document, not as a required final step.
 
 ## Skills
 
+### Business Analysis
+
 | Skill | Trigger | Prerequisites | Invocation |
 |-------|---------|---------------|------------|
 | **product-framer** | Plan a product, define what to build, create vision | None — always available | `/harness-skills:product-framer` |
 | **journey-designer** | Map user journeys, CUJ, pain points to features | `vision.md`, `personas/`, `capabilities/` | `/harness-skills:journey-designer` |
 | **user-story** | Write user stories, break epic into stories, add AC | Standalone OK, or reads `journeys/` + `features/` | `/harness-skills:user-story` |
+
+### Technical Architecture
+
+| Skill | Trigger | Prerequisites | Invocation |
+|-------|---------|---------------|------------|
 | **event-storming** | Domain modeling, discover aggregates, DDD model | `journeys/J*.md` + `features/F*.md` | `/harness-skills:event-storming` |
 | **sad-generator** | Generate SAD, architecture document | All upstream artifacts | `/harness-skills:sad-generator` |
 

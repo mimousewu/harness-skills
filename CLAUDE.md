@@ -6,17 +6,25 @@ A chain of elicitation skills that progressively builds product understanding fr
 
 ```
 product-framer → journey-designer → user-story → event-storming → [sad-generator]
+├─── Business Analysis (BA) ────────────────┤├── Technical Architecture ──┤
 ```
 
 Run them in order. Each skill reads upstream artifacts and refuses to start without them (except product-framer, which is the entry point). `sad-generator` is optional — use it when you need a formal architecture document, not as a required final step.
 
 ## When to Use What
 
+### Business Analysis
+
 | Skill | Trigger | Prerequisites |
 |-------|---------|---------------|
 | `product-framer` | Plan a product, define what to build, create vision | None — always available |
 | `journey-designer` | Map user journeys, CUJ, pain points to features | `vision.md`, `personas/`, `capabilities/` |
 | `user-story` | Write user stories, break epic into stories, add AC | Standalone OK, or reads `journeys/` + `features/` |
+
+### Technical Architecture
+
+| Skill | Trigger | Prerequisites |
+|-------|---------|---------------|
 | `event-storming` | Domain modeling, discover aggregates, DDD model | `journeys/J*.md` + `features/F*.md` |
 | `sad-generator` | Generate SAD, architecture document | All upstream artifacts |
 
