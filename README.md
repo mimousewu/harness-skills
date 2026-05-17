@@ -1,42 +1,56 @@
-# Harness Skills
+# Harness Skills — Product Management Pipeline
 
-A Claude Code plugin providing a structured product management workflow through Design Thinking elicitation. Each skill produces artifacts that feed into the next, forming a complete pipeline from product vision to software architecture.
+A chain of elicitation skills that progressively builds product understanding from vision to architecture. Each skill produces structured artifacts that downstream skills consume.
+
+## The Chain
+
+```
+product-framer → journey-designer → user-story → event-storming → [sad-generator]
+```
+
+Run them in order. Each skill reads upstream artifacts and refuses to start without them (except product-framer, which is the entry point). `sad-generator` is optional — use it when you need a formal architecture document, not as a required final step.
 
 ## Skills
 
-| Skill | Description | Invocation |
-|-------|-------------|------------|
-| **product-framer** | Frame Vision, Personas, and Capabilities | `/harness-skills:product-framer` |
-| **journey-designer** | Map user journeys and derive Features from pain points | `/harness-skills:journey-designer` |
-| **user-story** | Create INVEST-compliant user stories with acceptance criteria | `/harness-skills:user-story` |
-| **event-storming** | Domain discovery producing a DDD domain model | `/harness-skills:event-storming` |
-| **sad-generator** | Generate a Software Architecture Document (arc42 + C4) | `/harness-skills:sad-generator` |
+| Skill | Trigger | Prerequisites | Invocation |
+|-------|---------|---------------|------------|
+| **product-framer** | Plan a product, define what to build, create vision | None — always available | `/harness-skills:product-framer` |
+| **journey-designer** | Map user journeys, CUJ, pain points to features | `vision.md`, `personas/`, `capabilities/` | `/harness-skills:journey-designer` |
+| **user-story** | Write user stories, break epic into stories, add AC | Standalone OK, or reads `journeys/` + `features/` | `/harness-skills:user-story` |
+| **event-storming** | Domain modeling, discover aggregates, DDD model | `journeys/J*.md` + `features/F*.md` | `/harness-skills:event-storming` |
+| **sad-generator** | Generate SAD, architecture document | All upstream artifacts | `/harness-skills:sad-generator` |
 
-## Workflow
+## Artifact Flow
 
-The skills form a chain where each consumes the previous skill's output:
-
-```
-product-framer → journey-designer → user-story → event-storming → sad-generator
-```
-
-All artifacts are written to a `product-management/` directory:
+All skills write to `product-management/` in the working directory:
 
 ```
 product-management/
-  vision.md
-  personas/
-  capabilities.yaml
-  capabilities/
-  journeys/
-  features/
-  user-stories/
-  domain-model/
-  architecture/
-    sad.md
+  vision.md                          ← product-framer
+  personas/P{n}-{name}.md           ← product-framer
+  capabilities.yaml                  ← product-framer
+  capabilities/C{n}-{name}.md       ← product-framer
+  journeys/J{n}-{name}.md           ← journey-designer
+  features/F{n}-{name}.md           ← journey-designer
+  user-stories/US{n}-{name}.md      ← user-story
+  mockups/{name}.md                  ← user-story (optional, UI features)
+  domain/context-map.md             ← event-storming
+  domain/event-storming-{slug}.md   ← event-storming
+  domain/{bc-slug}/aggregate-*.md   ← event-storming
+  architecture/sad.md               ← sad-generator
 ```
 
-Each skill can also be used standalone if you provide the required context.
+Each skill owns its directory and never modifies upstream files. If upstream artifacts need correction, switch to the upstream skill to make changes — then return to continue downstream work.
+
+## How to Start
+
+**Greenfield product:** Start with `/product-framer`. It elicits Vision, Personas, and Capabilities through conversation.
+
+**Existing features, no structure:** Use `/product-framer` in reverse mode — feed it your feature list and it derives Vision + Capabilities bottom-up.
+
+**Just need user stories:** `/user-story` works standalone. It asks clarifying questions if no upstream artifacts exist.
+
+**Jump to domain modeling:** `/event-storming` works from journeys + features. `/sad-generator` synthesizes everything into arc42.
 
 ## Installation
 
@@ -90,15 +104,21 @@ This keeps the plugin available globally but only activates it (and its CLAUDE.m
 
 Reload with `/reload-plugins`.
 
-## Usage
+## Interaction Model
 
-Skills trigger automatically on natural language or via slash commands:
+All skills are elicitation-first (except sad-generator which is synthesis-heavy):
 
-- "Plan a new product" / "Define what to build" triggers **product-framer**
-- "Map the user journey" / "Critical user journey" triggers **journey-designer**
-- "Write user stories" / "Break this epic into stories" triggers **user-story**
-- "Model the domain" / "Discover aggregates" triggers **event-storming**
-- "Generate SAD" / "Architecture document" triggers **sad-generator**
+- They ask questions before generating — never dump output without context
+- They have hard gates — won't produce artifacts until they understand enough
+- They surface tradeoffs and push back when scope seems wrong
+- If a downstream skill discovers upstream problems, it recommends switching to the upstream skill to fix them — never silently modifying upstream files
+
+## Key Principles
+
+- **Progressive depth** — each layer adds specificity without repeating upstream work
+- **Conversation over templates** — adapt format to context
+- **Artifacts are living** — re-run skills when understanding evolves
+- **Ownership boundaries** — each skill writes only to its own directory
 
 ## License
 
