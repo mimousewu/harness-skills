@@ -73,7 +73,7 @@ ln -sf ~/repos/harness-skills/skills ~/.config/opencode/skills/harness
 
 ### Claude Code
 
-**Step 1: Register the marketplace** (one-time, global)
+**Step 1: Register the marketplace and enable the plugin**
 
 Add to `~/.claude/settings.json`:
 
@@ -86,19 +86,31 @@ Add to `~/.claude/settings.json`:
         "repo": "mimousewu/harness-skills"
       }
     }
+  },
+  "enabledPlugins": {
+    "harness-skills@harness-skills": true
   }
 }
 ```
 
-Then install the plugin:
+**Step 2: Install the plugin**
 
+```bash
+claude plugin install harness-skills@harness-skills
 ```
-/plugin install harness-skills@harness-skills
+
+If the CLI reports the marketplace is not found, clone it manually first:
+
+```bash
+git clone https://github.com/mimousewu/harness-skills.git \
+  ~/.claude/plugins/marketplaces/harness-skills
 ```
 
-**Step 2: Enable per project**
+Then re-run `claude plugin install harness-skills@harness-skills`.
 
-In each project where you want to use harness-skills, add `.claude/settings.json` at the project root:
+**Step 3: Enable per project (optional)**
+
+To restrict the plugin (and its CLAUDE.md pipeline guide) to specific projects, add `.claude/settings.json` at the project root:
 
 ```json
 {
@@ -108,9 +120,7 @@ In each project where you want to use harness-skills, add `.claude/settings.json
 }
 ```
 
-This keeps the plugin available globally but only activates it (and its CLAUDE.md pipeline guide) in projects that opt in.
-
-Reload with `/reload-plugins`.
+Skip this step if you've already enabled it globally in Step 1. Reload with `claude plugin reload` after making changes.
 
 ## Interaction Model
 
