@@ -1,6 +1,6 @@
 # Event Storming
 
-Domain discovery through interactive Event Storming elicitation, producing a formalized DDD domain model aligned with Scania's `ddd-concepts` annotation library. This skill takes upstream Harness output (Journeys, Features, User Stories) and produces structured domain model artifacts through collaborative dialogue.
+Domain discovery through interactive Event Storming elicitation, producing a formalized DDD domain model. This skill takes upstream Harness output (Journeys, Features, User Stories) and produces structured domain model artifacts through collaborative dialogue.
 
 **Scope:** Journey + Features + User Stories → Event Storming → Domain Model. Upstream: `user-story` (User Stories with AC), `journey-designer` (Journeys, Features), `product-framer` (Vision, Personas, Capabilities). Downstream: implementation.
 
@@ -118,9 +118,9 @@ Event-storming inherits product-framer's interaction rules:
 
 ---
 
-## Scania DDD Concepts Alignment
+## DDD Concepts Alignment
 
-The skill maps every discovered domain concept to Scania's `com.scania.hero.ddd.concepts` annotation library (MIT, Tao Wu 2022):
+The skill maps every discovered domain concept to annotation library (MIT, Tao Wu 2022):
 
 ### Write Side (Command)
 
@@ -267,7 +267,7 @@ File naming: lowercase kebab-case English slugs (e.g., `aggregate-vehicle.md`, `
 | Context Map (ACL, OHS, Conformist, Partnership) | Eric Evans, DDD (2003) | Relationships between bounded contexts |
 | CQRS (Command Query Responsibility Segregation) | Greg Young (2010) | Write Side (commands/events/aggregates) separated from Read Side (projections/queries) |
 | Ubiquitous Language | Eric Evans, DDD (2003) | Domain terms used consistently across code, docs, and conversation |
-| `ddd-concepts` annotation library | Tao Wu (2022) | `com.scania.hero.ddd.concepts` — MIT licensed Java annotations for DDD building blocks |
+| `ddd-concepts` annotation library | Tao Wu (2022) |  MIT licensed Java annotations for DDD building blocks |
 | User Input Classification | step1-ddd-domain-modeling.md | Low/Medium/High classification driving adaptive interaction flow |
 | Progressive elicitation | Beyer & Holtzblatt (1998) | Contextual Inquiry — discover in context, not through abstract questioning |
 | Answer drift handling | Harness product-framer | Four-type classification inherited from upstream skill |
@@ -280,7 +280,7 @@ File naming: lowercase kebab-case English slugs (e.g., `aggregate-vehicle.md`, `
 |------|---------|
 | `SKILL.md` | Complete step-by-step execution instructions |
 | `references/interaction-protocol.md` | Detailed Steps A-E interaction protocol with examples |
-| `references/scania-ddd-concepts.md` | Full annotation catalog, subtypes, decision guides, Event Storming mapping |
+| `references/ddd-concepts.md` | Full annotation catalog, subtypes, decision guides, Event Storming mapping |
 | `references/enrichment-protocol.md` | Domain model formalization rules, quality gates |
 | `references/state-display-templates.md` | ASCII state panels for all workflow steps |
 | `templates/event-storming-template.md` | Output template for event-storming.md |

@@ -5,7 +5,7 @@ description: Domain discovery through interactive Event Storming elicitation, pr
 
 # Event Storming Skill
 
-> Domain discovery through interactive Event Storming elicitation, producing a formalized DDD domain model aligned with Scania's `ddd-concepts` annotation library.
+> Domain discovery through interactive Event Storming elicitation, producing a formalized DDD domain model aligned with `ddd-concepts` annotation library.
 >
 > **Scope:** User Stories + Journeys + Features → Event Storming → Domain Model. Upstream: Harness `user-story` skill. Downstream: implementation.
 >
@@ -289,10 +289,10 @@ After all discoveries, present the naming table:
 
 ## Step 4: Domain Model Formalization
 
-### Assign Scania Annotations
+### Assign DDD Annotations
 
-Map every discovered concept to a `com.scania.hero.ddd.concepts` annotation.
-Reference: `references/scania-ddd-concepts.md` for the full catalog and decision guides.
+Map every discovered concept to a DDD annotation.
+Reference: `references/ddd-concepts.md` for the full catalog and decision guides.
 
 ### Derive Fields, Dependencies, and Methods
 
@@ -419,7 +419,7 @@ Inherited from Harness product-framer. Applied during Steps 3a/3b:
 | File | Purpose |
 |------|---------|
 | `references/interaction-protocol.md` | Detailed Steps A-E interaction protocol with examples |
-| `references/scania-ddd-concepts.md` | Full annotation catalog, subtypes, decision guides, Event Storming mapping |
+| `references/ddd-concepts.md` | Full annotation catalog, subtypes, decision guides, Event Storming mapping |
 | `references/enrichment-protocol.md` | Domain model formalization rules, quality gates |
 | `references/state-display-templates.md` | ASCII state panels for all workflow steps |
 | `templates/event-storming-template.md` | Output template for event-storming.md |

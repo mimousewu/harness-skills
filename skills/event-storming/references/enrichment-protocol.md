@@ -25,8 +25,8 @@ No silent ignoring. Every hotspot gets a disposition.
 
 ### 3. Assign Annotations
 
-Map every discovered concept to a `com.scania.hero.ddd.concepts` annotation.
-See `references/scania-ddd-concepts.md` for the full decision guide.
+Map every discovered concept to a DDD annotation.
+See `references/ddd-concepts.md` for the full decision guide.
 
 **Checklist per aggregate:**
 - [ ] Root entity has `@AggregateRoot`

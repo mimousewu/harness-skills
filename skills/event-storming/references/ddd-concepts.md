@@ -1,7 +1,6 @@
-# Scania DDD Concepts: Annotation Reference
+# DDD Concepts: Annotation Reference
 
-> Source: `com.scania.hero.ddd.concepts`
-> Path: `shared/vehicle-center/base/ddd-concepts/src/main/java/com/scania/hero/ddd/concepts/`
+> Source: `ddd-concepts`
 > License: MIT (Tao Wu, 2022)
 
 ---
