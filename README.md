@@ -52,7 +52,7 @@ Each skill owns its directory and never modifies upstream files. If upstream art
 
 ## How to Start
 
-**Greenfield product:** Start with `/product-framer`. It elicits Vision, Personas, and Capabilities through conversation.
+**Greenfield product:** Start with `/product-framer`. It elicits Vision, Personas (with value stream and business-outcome goals via Lean Value Tree), and Capabilities through conversation.
 
 **Existing features, no structure:** Use `/product-framer` in reverse mode — feed it your feature list and it derives Vision + Capabilities bottom-up.
 
@@ -137,6 +137,7 @@ All skills are elicitation-first (except sad-generator which is synthesis-heavy)
 - **Conversation over templates** — adapt format to context
 - **Artifacts are living** — re-run skills when understanding evolves
 - **Ownership boundaries** — each skill writes only to its own directory
+- **Business outcomes over features** — goals are derived via Lean Value Tree (role → value stream → business outcomes), not stated as feature descriptions
 
 ## License
 
