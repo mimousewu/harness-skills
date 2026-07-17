@@ -171,9 +171,10 @@ Track these dimensions throughout the conversation. Phase B targets whichever di
 | **业务问题 (Problem)** | At least 1 specific difficulty in a specific scenario | Abstract complaints ("效率低"、"不好用") |
 | **当前状态 (As-Is)** | Know what they do now + what tools they use | No idea about current approach |
 | **期望状态 (To-Be)** | Desired outcome can be visualized | Only negation ("不想再 XX") |
-| **产品名称 (Name)** | Has an explicit name | Not mentioned |
 
-Exit to Phase C when: all **required** dimensions (Who, Problem, As-Is, To-Be) reach "sufficient." Product name can be filled in Phase B if missed.
+Exit to Phase C when: all **required** dimensions (Who, Problem, As-Is, To-Be) reach "sufficient."
+
+> **Note:** Product name is NOT an exit condition for Step 1. Names often emerge later in conversation — mark "待定" if not yet defined, and fill it in during Step 2 Vision confirmation.
 
 "Sufficient" doesn't mean "perfect" — it means: **enough to write a calibratable Vision draft.** Step 2 has its own confirmation loop; don't try to perfect everything here.
 
@@ -199,18 +200,20 @@ Then synthesize:
 
 > "基于我们的对话，我理解的整体情况是这样的：... 哪里需要修正？"
 
-### Step 1.5: Persona Confirmation
+### Step 1.5: Persona Confirmation + LVT Goal Derivation
 
-**Purpose:** Capture personas discovered during Empathize before they get lost.
+**Purpose:** Capture personas and derive business-outcome goals using Lean Value Tree.
 
 From Step 1, extract personas — both **user roles** (functional needs) and **review roles** (non-functional: security auditors, reliability engineers, etc.).
 
 For each persona, generate a lightweight card containing:
 - Role name and type (用户角色 / 审查角色)
-- Goals
+- Context (1-2 sentences: who, scene, what they care about)
+- Value Stream — derive via Lean Value Tree (use `references/empathize-question-bank.md` "Surfacing Business Outcomes (LVT)" questions if goals are still expressed as features rather than business outcomes)
+- Goals (must be business outcomes, NOT feature descriptions)
 - Daily workflow
 - Current tools/systems
-- Pain points
+- Pain points (business-level obstacles, not UX complaints)
 - Drivers (what motivates decisions)
 - Typical quotes (if surfaced)
 
@@ -247,18 +250,13 @@ Ask: "以上 Vision 内容是否正确？直接说'确认'或告诉我哪里需�
 
 ### Step 3: Collaborative Capability Decomposition
 
-**Purpose:** Decompose Vision into Capabilities through collaborative discussion, not one-way generation.
+**Purpose:** Decompose Vision into Capabilities. Since persona goals are now business outcomes (via LVT in Step 1.5), goal-based decomposition is the natural default.
 
 **3a — Present Decomposition Dimensions**
 
-Offer 2-3 decomposition approaches based on the product context. See `references/decomposition-patterns.md` for four standard dimensions.
+Prefer persona business goals as the primary dimension. Offer alternatives from `references/decomposition-patterns.md` only when goals don't map cleanly:
 
-> "基于 Vision，我看到几种可能的拆法：
->
-> **按用户角色拆**：[角色A] 关心 X，[角色B] 关心 Y
-> **按用户目标拆**：[目标1]、[目标2]、[目标3]
->
-> 你觉得哪种更符合业务逻辑？或者有其他维度？"
+> "Based on [P1]'s business goals: [goal1], [goal2], [goal3] — each maps to a Capability. OK to decompose this way? Or would you prefer a different dimension (by role, by workflow stage, etc.)?"
 
 **3b — User Selects Dimension**
 
@@ -313,6 +311,7 @@ Coverage checks:
 - Differentiation → reflected in Capabilities
 - No overlapping scope between Capabilities (MECE)
 - Each Capability independently deliverable
+- Vision.md stays in sync with current persona files and capability files — update any outdated sections before Step 5
 
 For each Capability, confirm:
 - Priority (P0/P1/P2) with justification

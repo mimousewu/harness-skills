@@ -80,6 +80,19 @@ Used when the user gives abstract/vague answers:
 | "不好用" | "哪里不好用？是找不到功能、操作步骤多、还是结果不准确？" |
 | "有需求" | "需求是谁提的？在什么情况下产生的？他们现在怎么应对？" |
 
+## Surfacing Business Outcomes (LVT)
+
+Used when a role is identified but goals are still expressed as feature descriptions. Derives value stream and business goals via Lean Value Tree:
+
+- "How is [role]'s performance measured? What are their KPIs?"
+- "If [role] had a great year, what numbers would prove it?"
+- "What metrics does [role]'s boss care about most?"
+- "From a business perspective, what outcomes does [role]'s work ultimately impact?"
+- "Break [role]'s work into an end-to-end value stream. What are the stages? X → Y → Z?"
+- "In [role]'s value stream, which stage improvement would have the biggest business impact?"
+
+**When to use**: After daily workflow is described but goals haven't been articulated as business outcomes. Use 1-2 questions before finalizing persona goals. Skip if user already gave clear outcome-oriented goals.
+
 ## Tips for the Agent
 
 1. **Don't exhaust all questions** — stop when you have enough to move to Phase B
