@@ -1,6 +1,6 @@
 # Workflow Details
 
-完整 6 步工作流详细指令。SKILL.md 保留核心框架，此处为逐步骤操作指南。
+Complete 6-step workflow instructions. SKILL.md retains the core framework; this file provides step-by-step operational guidance.
 
 ---
 
@@ -57,33 +57,35 @@ Track these dimensions throughout the conversation. Phase B targets whichever di
 
 | Dimension | Sufficient | Insufficient (needs follow-up) |
 |---|---|---|
-| **用户角色 (Who)** | At least 1 role with concrete goal | Only vague labels ("用户"、"客户") |
-| **业务问题 (Problem)** | At least 1 specific difficulty in a specific scenario | Abstract complaints ("效率低"、"不好用") |
-| **当前状态 (As-Is)** | Know what they do now + what tools they use | No idea about current approach |
-| **期望状态 (To-Be)** | Desired outcome can be visualized | Only negation ("不想再 XX") |
+| **User Roles (Who)** | At least 1 role with concrete goal | Only vague labels ("users", "customers") |
+| **Business Problem** | At least 1 specific difficulty in a specific scenario | Abstract complaints ("inefficient", "hard to use") |
+| **Current State (As-Is)** | Know what they do now + what tools they use | No idea about current approach |
+| **Desired State (To-Be)** | Desired outcome can be visualized | Only negation ("don't want to do XX anymore") |
 
-**Exit to Phase C when:** Who、Problem、As-Is、To-Be 四个维度全部达到"足够"。
+**Exit to Phase C when:** all four dimensions (Who, Problem, As-Is, To-Be) reach "sufficient."
 
-> **Note:** Product name is NOT an exit condition for Step 1. Names often emerge later in conversation — mark "待定" if not yet defined, and fill it in during Step 2 Vision confirmation.
+> **Note:** Product name is NOT an exit condition for Step 1. Names often emerge later in conversation — mark as "TBD" if not yet defined, and fill it in during Step 2 Vision confirmation.
 
-"足够"不要求完美——意思是**足够写出一个可以校准的 Vision 草稿**。Step 2 有自己的确认循环，不必在这里追求完美。
+"Sufficient" does not mean "perfect" — it means **enough to write a calibratable Vision draft.** Step 2 has its own confirmation loop; don't try to perfect everything here.
 
-如果某个维度追问 2 次仍不足，标记"待定"并在状态面板中明确标注。不要阻塞流程。
+If a dimension stays insufficient after 2 targeted questions, mark it "TBD" and note it explicitly in the state display. Don't block the flow.
 
-如果维度之间存在矛盾（例如用户说的问题与其描述的工作流不匹配），触发校准："你刚才说 X，但前面提到 Y，这两个怎么对应？"
+If dimensions contradict each other (e.g., stated problem doesn't match described workflow), trigger a calibration:
+
+> "你刚才说 X，但前面提到 Y，这两个怎么对应？"
 
 ### Phase C — Synthesis Confirmation
 
 Before synthesizing, flush the Parking Lot — route each parked item to its proper field or discard it:
 
 ```
-Parking Lot 清理：
-  · [项目 1] → 归入 Vision.Constraints
-  · [项目 2] → 归入 Vision.Non-Goals
-  · [项目 3] → 留作 Capability 阶段参考
-  · [项目 4] → 判定为超出范围，丢弃
+Parking Lot cleanup:
+  · [item 1] → route to Vision.Constraints
+  · [item 2] → route to Vision.Non-Goals
+  · [item 3] → hold for Capability phase
+  · [item 4] → out of scope, discard
 
-  确认处理方式？
+  Confirm routing?
 ```
 
 Then synthesize:
@@ -150,7 +152,9 @@ The Vision includes (see `templates/vision-template.md` for full format):
 
 > "这个产品**不做**什么？有没有什么容易被误认为在范围内、但其实不应该做的？"
 
-Ask: "以上 Vision 内容是否正确？直接说'确认'或告诉我哪里需要修改。"
+Ask:
+
+> "以上 Vision 内容是否正确？直接说'确认'或告诉我哪里需要修改。"
 
 ---
 
@@ -225,7 +229,9 @@ For each Capability, confirm:
 - Priority (P0/P1/P2) with justification
 - Dependencies (which Capabilities must exist first)
 
-Ask: "Coverage Check 是否通过？直接说'确认'或告诉我缺什么。"
+Ask:
+
+> "Coverage Check 是否通过？直接说'确认'或告诉我缺什么。"
 
 ---
 
@@ -240,4 +246,6 @@ Ask: "Coverage Check 是否通过？直接说'确认'或告诉我缺什么。"
 
 Display output summary using `@references/state-display-templates.md` — "Output State."
 
-Ask: "Planning 完成！是否需要继续 Journey 设计？（下一步使用 journey-designer skill）"
+Ask:
+
+> "Planning 完成！是否需要继续 Journey 设计？（下一步使用 journey-designer skill）"

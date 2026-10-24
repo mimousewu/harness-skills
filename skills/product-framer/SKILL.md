@@ -86,7 +86,7 @@ Extract the main thread, confirm, then drill into one dimension at a time.
 Don't insist. Reframe from a different angle — negation is often easier than affirmation.
 > "没关系，这个我们后面再定义。换个角度——现有方案最让客户不满意的地方是什么？"
 
-If a dimension stays blank after 2 attempts, mark it "待定" and move on. Don't block the flow.
+If a dimension stays blank after 2 attempts, mark it "TBD" and move on. Don't block the flow.
 
 When drift produces information that doesn't belong to the current dimension, place it in the **Parking Lot** — a visible section in the state display that holds items awaiting classification. Each parked item should note its suggested destination (e.g., "→ Constraints", "→ ~F candidate"). See `references/state-display-templates.md` — "Parking Lot Block."
 
@@ -114,7 +114,7 @@ Step 4:   Coverage Check + Worksheet
 Step 5:   Output + Save Files
 ```
 
-**详细步骤指令见 `references/workflow-details.md`。** 该文件包含每一步的具体提问、Gate 条件和操作指南。
+**Detailed step-by-step instructions in `references/workflow-details.md`.** That file contains specific questions, gate conditions, and operational guidance for each step.
 
 ## Guiding Principles
 
@@ -179,7 +179,7 @@ When resuming, always show current state before asking what to do next.
 
 ## Resources
 
-- `references/workflow-details.md` — 完整的 Steps 0-5 操作指令（含 Gate 条件和具体提问）
+- `references/workflow-details.md` — Complete Steps 0-5 operational instructions (with gate conditions and specific questions)
 - `references/state-display-templates.md` — ASCII state panels for all workflow steps
 - `references/decomposition-patterns.md` — Capability decomposition dimensions and guidelines
 - `references/empathize-question-bank.md` — Categorized open questions for Empathize phase

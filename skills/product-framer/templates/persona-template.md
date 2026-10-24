@@ -33,12 +33,12 @@ Example — Fleet Manager: vehicle availability → cost control → safety mana
 
 ## 日常工作
 
-[一天的工作是什么样的，典型流程。写 2-3 句话描述日常，不需要长篇大论]
+[Daily workflow — what a typical day looks like. 2-3 sentences describing routine, no essay needed]
 
 ## 当前工具/系统
 
-- [工具/系统 1]：[用途]
-- [工具/系统 2]：[用途]
+- [Tool/system 1]: [purpose]
+- [Tool/system 2]: [purpose]
 
 ## 痛点
 
@@ -47,16 +47,16 @@ Example — Fleet Manager: vehicle availability → cost control → safety mana
 
 ## 驱动力
 
-- [什么让他有成就感/什么驱动他的决策 1]
-- [什么驱动他的决策 2]
+- [What gives them a sense of achievement / what drives their decisions 1]
+- [What drives their decisions 2]
 
 ## 典型表达
 
-- "[用户在对话中的原话或典型表达]"
+- "[Direct quote or characteristic expression from conversation]"
 
 ## 关联 Capabilities
 
-[C-ID list — 在 Step 5 时填充]
+[C-ID list — populated in Step 5]
 
 ---
 
@@ -68,7 +68,7 @@ Example — Fleet Manager: vehicle availability → cost control → safety mana
 
 | Field | Description | When Filled |
 |-------|-------------|-------------|
-| 类型 | 用户角色 (functional needs) or 审查角色 (non-functional: security, reliability, compliance) | Step 1.5 |
+| 类型 | User Role (functional needs) or Review Role (non-functional: security, reliability, compliance) | Step 1.5 |
 | 角色背景 | 1-2 sentence context: who, scene, what they care about. Scene-neutral. | Step 1.5 |
 | 价值流 | End-to-end business value flow. Derivation basis for goals. | Step 1.5 |
 | 目标 | Business-outcome goals derived from value stream stages. NOT feature descriptions. | Step 1.5 |
@@ -106,4 +106,4 @@ Defines non-functional requirements — what "good work" looks like:
 - Security auditor, reliability engineer, compliance officer, data privacy officer
 - Focus: quality gates, constraints, standards, regulations
 
-Harness methodology emphasizes review roles because they define constraints that downstream Agent implementation must respect. Without them, Agents only optimize for functional correctness and miss security/reliability/compliance requirements.
+The harness methodology emphasizes review roles because they define constraints that downstream Agent implementation must respect. Without them, Agents only optimize for functional correctness and miss security/reliability/compliance requirements.
