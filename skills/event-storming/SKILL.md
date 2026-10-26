@@ -1,6 +1,7 @@
 ---
 name: event-storming
-description: Domain discovery through interactive Event Storming elicitation, producing a formalized DDD domain model. Trigger phrases: "event storming", "domain modeling", "model the domain", "discover aggregates", "DDD model", "domain discovery", "design the domain".
+description: >-
+  Domain discovery through interactive Event Storming elicitation, producing a formalized DDD domain model. Trigger phrases: "event storming", "domain modeling", "model the domain", "discover aggregates", "DDD model", "domain discovery", "design the domain".
 ---
 
 # Event Storming Skill

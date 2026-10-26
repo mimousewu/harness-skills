@@ -1,6 +1,7 @@
 ---
 name: journey-designer
-description: Map user journeys from Capabilities and derive Features through structured elicitation. ALWAYS use this skill when user wants to create user journeys, map user experience flows, identify pain points from user behaviors, or derive features from journey analysis. Also use when breaking down Capabilities into end-to-end user paths, or when the user mentions CUJ (Critical User Journey), journey mapping, experience mapping, or pain-point-to-feature derivation. Triggers: "user journey", "journey mapping", "map the experience", "CUJ", "critical user journey", "pain points to features", "derive features from journey", "end-to-end user flow", "break down capability into journeys", "journey designer".
+description: >-
+  Map user journeys from Capabilities and derive Features through structured elicitation. ALWAYS use this skill when user wants to create user journeys, map user experience flows, identify pain points from user behaviors, or derive features from journey analysis. Also use when breaking down Capabilities into end-to-end user paths, or when the user mentions CUJ (Critical User Journey), journey mapping, experience mapping, or pain-point-to-feature derivation. Triggers: "user journey", "journey mapping", "map the experience", "CUJ", "critical user journey", "pain points to features", "derive features from journey", "end-to-end user flow", "break down capability into journeys", "journey designer".
 ---
 
 # Journey Designer
